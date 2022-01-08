@@ -35,6 +35,7 @@ class App {
     }
     setMongooseConnection() {
         const mongo_url = `${process.env.MONGODB_URL}`;
+        console.log(mongo_url);
         mongoose_1.default.connect(mongo_url);
     }
 }
