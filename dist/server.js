@@ -29,8 +29,9 @@ const home_controller_1 = __importDefault(require("./controllers/home.controller
 const log_middleware_1 = __importDefault(require("./middlewares/log.middleware"));
 const task_controller_1 = __importDefault(require("./controllers/task.controller"));
 const list_controller_1 = __importDefault(require("./controllers/list.controller"));
+const port = process.env.PORT || 8080;
 const app = new App_1.default({
-    port: 3000,
+    port: Number(port),
     middlewares: [
         (0, morgan_1.default)('dev'),
         bodyParser.urlencoded({ extended: true }),
