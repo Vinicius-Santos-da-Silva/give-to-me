@@ -1,5 +1,5 @@
 import express , { Application } from "express";
-import mongoose from "mongoose";
+import mongoose, { mongo } from "mongoose";
 import dotenv from 'dotenv';
 dotenv.config({ path: '../.env' });
 
@@ -49,6 +49,8 @@ class App {
         
         const mongo_url: string = `${process.env.MONGODB_URL}`;
 
+        console.log(mongo_url)
+        
         mongoose.connect(mongo_url)
     
     }
